@@ -1,1 +1,41 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-background: hsl(223, 31%, 20%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
+  --theme1-key-background-blue: hsl(225, 21%, 49%);
+  --theme1-key-shadow-blue: hsl(224, 28%, 35%);
+  --theme1-key-background-red: hsl(6, 63%, 50%);
+  --theme1-key-shadow-red: hsl(6, 70%, 34%);
+  --theme1-key-background-grey: hsl(30, 25%, 89%);
+  --theme1-key-shadow-grey: hsl(28, 16%, 65%);
+  --theme1-font-blue: hsl(221, 14%, 31%);
+  --theme1-font-white: hsl(0, 0, 100%);
+  --theme2-main-background: hsl(0, 0%, 90%);
+  --theme2-toggle-background: hsl(0, 5%, 81%);
+  --theme2-screen-background: hsl(0, 0%, 93%);
+  --theme2-key-background-cyan: hsl(185, 42%, 37%);
+  --theme2-key-shadow-cyan: hsl(185, 58%, 25%);
+  --theme2-key-background-orange: hsl(25, 98%, 40%);
+  --theme2-key-shadow-orange: hsl(25, 99%, 27%);
+  --theme2-key-background-grey: hsl(45, 7%, 89%);
+  --theme2-key-shadow-grey: hsl(35, 11%, 61%)
+  --theme2-font-grey: hsl(60, 10%, 19%);
+  --theme2-font-white: var(--theme1-font-white);
+  --theme3-main-background: hsl(268, 75%, 9%);
+  --theme3-toggle-background: hsl(268, 71%, 12%);
+  --theme3-screen-background: var(var(--theme3-toggle-background));
+  --theme3-key-background-violet: hsl(281, 89%, 26%);
+  --theme3-key-shadow-violet: hsl(285, 91%, 52%);
+  --theme3-key-background-cyan: hsl(176, 100%, 44%);
+  --theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+  --theme3-key-background-magenta: hsl(268, 47%, 21%);
+  --theme3-key-shadow-magenta: hsl(290, 70%, 36%);
+  --theme3-font-yellow: hsl(52, 100%, 62%);
+  --theme3-font-blue: hsl(198, 20%, 13%);
+  --theme3-font-white: var(--theme1-font-white);
+}
+
+:root {
+  font-family: "League Spartan", sans-serif;
+}/*# sourceMappingURL=main.css.map */
