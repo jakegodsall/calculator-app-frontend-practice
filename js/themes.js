@@ -11,7 +11,7 @@ const changeTheme = (e) => {
 
     console.log(theme);
 
-    // document.body.className = theme;
+    document.body.className = theme;
 };
 
 radioButtons.forEach((button) => {

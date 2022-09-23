@@ -1,3 +1,79 @@
 .theme3 {
+    --theme3-main-background: hsl(268, 75%, 9%);
+    --theme3-toggle-background: hsl(268, 71%, 12%);
+    --theme3-screen-background: var(var(--theme3-toggle-background));
+    --theme3-key-background-violet: hsl(281, 89%, 26%);
+    --theme3-key-shadow-violet: hsl(285, 91%, 52%);
+    --theme3-key-background-cyan: hsl(176, 100%, 44%);
+    --theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+    --theme3-key-background-magenta: hsl(268, 47%, 21%);
+    --theme3-key-shadow-magenta: hsl(290, 70%, 36%);
+
+    --theme3-font-yellow: hsl(52, 100%, 62%);
+    --theme3-font-blue: hsl(198, 20%, 13%);
+    --theme3-font-white: var(--theme1-font-white);
+
     background-color: var(--theme3-main-background);
+
+    .calculator {
+        color: var(--theme3-font-yellow);
+
+        &__header {
+            color: var(--theme3-font-yellow);
+        }
+
+        &__theme-radio {
+            background-color: var(--theme3-toggle-background);
+
+            input[type='radio']:checked {
+                accent-color: var(--theme3-key-background-red);
+            }
+
+            .active {
+                background-color: var(--theme3-key-background-cyan);
+            }
+        }
+
+        &__screen {
+            background-color: var(--theme3-toggle-background);
+        }
+
+        &__controls {
+            background-color: var(--theme3-toggle-background);
+
+            button {
+                background-color: var(--theme3-key-background-magenta);
+                box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
+                color: var(--theme3-font-grey);
+            }
+
+            .reset,
+            .delete,
+            .equals {
+                font-size: 0.7rem;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .reset,
+            .delete {
+                background-color: var(--theme3-key-background-violet);
+                box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
+            }
+
+            .equals {
+                background-color: var(--theme3-key-background-cyan);
+                box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-cyan);
+            }
+        }
+    }
+
+    .attribution {
+        color: var(--theme3-font-yellow);
+
+        a,
+        a:visited {
+            color: var(--theme3-key-background-cyan);
+        }
+    }
 }

@@ -1,3 +1,74 @@
 .theme2 {
+    --theme2-main-background: hsl(0, 0%, 90%);
+    --theme2-toggle-background: hsl(0, 5%, 81%);
+    --theme2-screen-background: hsl(0, 0%, 93%);
+    --theme2-key-background-cyan: hsl(185, 42%, 37%);
+    --theme2-key-shadow-cyan: hsl(185, 58%, 25%);
+    --theme2-key-background-orange: hsl(25, 98%, 40%);
+    --theme2-key-shadow-orange: hsl(25, 99%, 27%);
+    --theme2-key-background-grey: hsl(45, 7%, 89%);
+    --theme2-key-shadow-grey: hsl(35, 11%, 61%);
+    --theme2-font-grey: hsl(60, 10%, 19%);
+
     background-color: var(--theme2-main-background);
+
+    .calculator {
+        &__header {
+            color: var(--theme2-font-grey);
+        }
+
+        &__theme-radio {
+            background-color: var(--theme2-toggle-background);
+
+            input[type='radio']:checked {
+                accent-color: var(--theme2-key-background-red);
+            }
+
+            .active {
+                background-color: var(--theme2-key-background-orange);
+            }
+        }
+
+        &__screen {
+            background-color: var(--theme2-screen-background);
+        }
+
+        &__controls {
+            background-color: var(--theme2-toggle-background);
+
+            button {
+                background-color: var(--theme2-key-background-grey);
+                box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-grey);
+                color: var(--theme2-font-grey);
+            }
+
+            .reset,
+            .delete,
+            .equals {
+                font-size: 0.7rem;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .reset,
+            .delete {
+                background-color: var(--theme2-key-background-cyan);
+                box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-cyan);
+            }
+
+            .equals {
+                background-color: var(--theme2-key-background-orange);
+                box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-orange);
+            }
+        }
+    }
+
+    .attribution {
+        color: var(--theme2-key-background-cyan);
+
+        a,
+        a:visited {
+            color: var(--theme2-key-background-orange);
+        }
+    }
 }

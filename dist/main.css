@@ -67,6 +67,7 @@ body {
 .attribution {
   margin-top: 5rem;
   font-size: 0.7rem;
+  text-align: center;
 }
 
 .calculator__header {
@@ -193,6 +194,7 @@ body {
 .theme1 .calculator__controls button {
   background-color: var(--theme1-key-background-grey);
   box-shadow: 0px 2px 0px 3px var(--theme1-key-shadow-grey);
+  color: var(--theme1-font-blue);
 }
 .theme1 .calculator__controls .reset,
 .theme1 .calculator__controls .delete,
@@ -210,11 +212,135 @@ body {
   background-color: var(--theme1-key-background-red);
   box-shadow: 0px 2px 0px 3px var(--theme1-key-shadow-red);
 }
+.theme1 .attribution {
+  color: var(--theme1-key-background-grey);
+}
+.theme1 .attribution a,
+.theme1 .attribution a:visited {
+  color: var(--theme1-key-background-red);
+}
 
 .theme2 {
+  --theme2-main-background: hsl(0, 0%, 90%);
+  --theme2-toggle-background: hsl(0, 5%, 81%);
+  --theme2-screen-background: hsl(0, 0%, 93%);
+  --theme2-key-background-cyan: hsl(185, 42%, 37%);
+  --theme2-key-shadow-cyan: hsl(185, 58%, 25%);
+  --theme2-key-background-orange: hsl(25, 98%, 40%);
+  --theme2-key-shadow-orange: hsl(25, 99%, 27%);
+  --theme2-key-background-grey: hsl(45, 7%, 89%);
+  --theme2-key-shadow-grey: hsl(35, 11%, 61%);
+  --theme2-font-grey: hsl(60, 10%, 19%);
   background-color: var(--theme2-main-background);
+}
+.theme2 .calculator__header {
+  color: var(--theme2-font-grey);
+}
+.theme2 .calculator__theme-radio {
+  background-color: var(--theme2-toggle-background);
+}
+.theme2 .calculator__theme-radio input[type=radio]:checked {
+  accent-color: var(--theme2-key-background-red);
+}
+.theme2 .calculator__theme-radio .active {
+  background-color: var(--theme2-key-background-orange);
+}
+.theme2 .calculator__screen {
+  background-color: var(--theme2-screen-background);
+}
+.theme2 .calculator__controls {
+  background-color: var(--theme2-toggle-background);
+}
+.theme2 .calculator__controls button {
+  background-color: var(--theme2-key-background-grey);
+  box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-grey);
+  color: var(--theme2-font-grey);
+}
+.theme2 .calculator__controls .reset,
+.theme2 .calculator__controls .delete,
+.theme2 .calculator__controls .equals {
+  font-size: 0.7rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.theme2 .calculator__controls .reset,
+.theme2 .calculator__controls .delete {
+  background-color: var(--theme2-key-background-cyan);
+  box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-cyan);
+}
+.theme2 .calculator__controls .equals {
+  background-color: var(--theme2-key-background-orange);
+  box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-orange);
+}
+.theme2 .attribution {
+  color: var(--theme2-key-background-cyan);
+}
+.theme2 .attribution a,
+.theme2 .attribution a:visited {
+  color: var(--theme2-key-background-orange);
 }
 
 .theme3 {
+  --theme3-main-background: hsl(268, 75%, 9%);
+  --theme3-toggle-background: hsl(268, 71%, 12%);
+  --theme3-screen-background: var(var(--theme3-toggle-background));
+  --theme3-key-background-violet: hsl(281, 89%, 26%);
+  --theme3-key-shadow-violet: hsl(285, 91%, 52%);
+  --theme3-key-background-cyan: hsl(176, 100%, 44%);
+  --theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+  --theme3-key-background-magenta: hsl(268, 47%, 21%);
+  --theme3-key-shadow-magenta: hsl(290, 70%, 36%);
+  --theme3-font-yellow: hsl(52, 100%, 62%);
+  --theme3-font-blue: hsl(198, 20%, 13%);
+  --theme3-font-white: var(--theme1-font-white);
   background-color: var(--theme3-main-background);
+}
+.theme3 .calculator {
+  color: var(--theme3-font-yellow);
+}
+.theme3 .calculator__header {
+  color: var(--theme3-font-yellow);
+}
+.theme3 .calculator__theme-radio {
+  background-color: var(--theme3-toggle-background);
+}
+.theme3 .calculator__theme-radio input[type=radio]:checked {
+  accent-color: var(--theme3-key-background-red);
+}
+.theme3 .calculator__theme-radio .active {
+  background-color: var(--theme3-key-background-cyan);
+}
+.theme3 .calculator__screen {
+  background-color: var(--theme3-toggle-background);
+}
+.theme3 .calculator__controls {
+  background-color: var(--theme3-toggle-background);
+}
+.theme3 .calculator__controls button {
+  background-color: var(--theme3-key-background-magenta);
+  box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
+  color: var(--theme3-font-grey);
+}
+.theme3 .calculator__controls .reset,
+.theme3 .calculator__controls .delete,
+.theme3 .calculator__controls .equals {
+  font-size: 0.7rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.theme3 .calculator__controls .reset,
+.theme3 .calculator__controls .delete {
+  background-color: var(--theme3-key-background-violet);
+  box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
+}
+.theme3 .calculator__controls .equals {
+  background-color: var(--theme3-key-background-cyan);
+  box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-cyan);
+}
+.theme3 .attribution {
+  color: var(--theme3-font-yellow);
+}
+.theme3 .attribution a,
+.theme3 .attribution a:visited {
+  color: var(--theme3-key-background-cyan);
 }/*# sourceMappingURL=main.css.map */
