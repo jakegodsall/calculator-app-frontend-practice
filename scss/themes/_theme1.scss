@@ -19,6 +19,14 @@
 
         &__theme-radio {
             background-color: var(--theme1-toggle-background);
+
+            input[type='radio']:checked {
+                accent-color: var(--theme1-key-background-red);
+            }
+
+            .active {
+                background-color: var(--theme1-key-background-red);
+            }
         }
 
         &__screen {
