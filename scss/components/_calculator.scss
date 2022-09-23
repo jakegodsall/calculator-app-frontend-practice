@@ -1,2 +1,5 @@
-.calculator {
+@media screen and (min-width: 400px) {
+    .calculator {
+        width: min(80%, 500px);
+    }
 }

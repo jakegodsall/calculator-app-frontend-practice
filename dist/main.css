@@ -70,6 +70,11 @@ body {
   text-align: center;
 }
 
+@media screen and (min-width: 400px) {
+  .calculator {
+    width: min(80%, 500px);
+  }
+}
 .calculator__header {
   display: flex;
   justify-content: space-between;
