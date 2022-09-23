@@ -1,6 +1,7 @@
 // ----------------- DOM ELEMENTS -----------------
 const screenText = document.getElementById('screen-text');
 const buttons = document.getElementsByTagName('button');
+const equalsButton = document.getElementById('button-equals');
 
 // ----------------- UTILITY FNS -----------------
 
@@ -33,6 +34,63 @@ const clearInput = () => {
     screenText.innerText = '0';
 };
 
+// addition
+const addNumbers = () => {
+    const firstValue = screenText.innerText;
+    screenText.innerText = '0';
+
+    equalsButton.addEventListener('click', () => {
+        const secondValue = screenText.innerText;
+
+        const result = +firstValue + +secondValue;
+
+        clearInput();
+        printNumber(result);
+    });
+};
+
+const subtractNumbers = () => {
+    const firstValue = screenText.innerText;
+    screenText.innerText = '0';
+
+    equalsButton.addEventListener('click', () => {
+        const secondValue = screenText.innerText;
+
+        const result = +firstValue - +secondValue;
+
+        clearInput();
+        printNumber(result);
+    });
+};
+
+const multiplyNumbers = () => {
+    const firstValue = screenText.innerText;
+    screenText.innerText = '0';
+
+    equalsButton.addEventListener('click', () => {
+        const secondValue = screenText.innerText;
+
+        const result = +firstValue * +secondValue;
+
+        clearInput();
+        printNumber(result);
+    });
+};
+
+const divideNumbers = () => {
+    const firstValue = screenText.innerText;
+    screenText.innerText = '0';
+
+    equalsButton.addEventListener('click', () => {
+        const secondValue = screenText.innerText;
+
+        const result = +firstValue / +secondValue;
+
+        clearInput();
+        printNumber(result);
+    });
+};
+
 // ----------------- BUTTON LOGIC -----------------
 
 for (let button of buttons) {
@@ -58,6 +116,26 @@ for (let button of buttons) {
     if (button.classList[1] === 'decimal-point') {
         button.addEventListener('click', addDecimal);
     }
+
+    // ----------------- ADDITION -----------------
+    if (button.classList[1] === 'addition') {
+        button.addEventListener('click', addNumbers);
+    }
+
+    // ----------------- SUBTRACTION -----------------
+    if (button.classList[1] === 'subtraction') {
+        button.addEventListener('click', subtractNumbers);
+    }
+
+    // ----------------- MULTIPLICATION -----------------
+    if (button.classList[1] === 'product') {
+        button.addEventListener('click', multiplyNumbers);
+    }
+
+    // ----------------- DIVISION -----------------
+    if (button.classList[1] === 'division') {
+        button.addEventListener('click', divideNumbers);
+    }
 }
 
 // ----------------- KEYBOARD LOGIC  -----------------
@@ -76,5 +154,25 @@ document.addEventListener('keydown', (e) => {
     // ----------------- ADD DECIMAL -----------------
     if (e.key === '.') {
         addDecimal();
+    }
+
+    // ----------------- ADDITION -----------------
+    if (e.key === '+') {
+        addNumbers();
+    }
+
+    // ----------------- SUBTRACTION -----------------
+    if (e.key === '-') {
+        subtractNumbers();
+    }
+
+    // ----------------- MULTIPLICATION -----------------
+    if (e.key === '*') {
+        multiplyNumbers();
+    }
+
+    // ----------------- DIVISION -----------------
+    if (e.key === '/') {
+        divideNumbers();
     }
 });
