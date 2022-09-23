@@ -14,6 +14,13 @@
     background-color: var(--theme1-main-background);
 
     .calculator {
+        &__header {
+        }
+
+        &__theme-radio {
+            background-color: var(--theme1-toggle-background);
+        }
+
         &__screen {
             background-color: var(--theme1-screen-background);
         }
