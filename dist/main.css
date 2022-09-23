@@ -66,19 +66,29 @@ body {
   font-size: 32px;
 }
 
+* {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:root {
+  --bd-radius: 10px;
+}
+
 .attribution {
   margin-top: 5rem;
   font-size: 0.7rem;
-}
-
-.calculator {
-  width: 70vw;
 }
 
 .calculator__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
+}
+
+.calculator__logo {
+  margin: 1rem 0;
 }
 
 .calculator__theme-slider {
@@ -98,7 +108,9 @@ body {
 
 .calculator__screen {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: var(--bd-radius);
 }
 
 .calculator__controls {
@@ -106,10 +118,15 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--bd-radius);
 }
 
 .button {
-  padding: 0.4rem 0.4rem;
+  padding: 0.5rem 0.2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
 }
 
 .reset {
@@ -118,4 +135,52 @@ body {
 
 .equals {
   grid-column: 3/5;
+}
+
+.theme1 {
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-toggle-background: hsl(223, 31%, 20%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
+  --theme1-key-background-blue: hsl(225, 21%, 49%);
+  --theme1-key-shadow-blue: hsl(224, 28%, 35%);
+  --theme1-key-background-red: hsl(6, 63%, 50%);
+  --theme1-key-shadow-red: hsl(6, 70%, 34%);
+  --theme1-key-background-grey: hsl(30, 25%, 89%);
+  --theme1-key-shadow-grey: hsl(28, 16%, 65%);
+  --theme1-font-blue: hsl(221, 14%, 31%);
+  background-color: var(--theme1-main-background);
+}
+.theme1 .calculator__screen {
+  background-color: var(--theme1-screen-background);
+}
+.theme1 .calculator__controls {
+  background-color: var(--theme1-toggle-background);
+}
+.theme1 .calculator__controls button {
+  background-color: var(--theme1-key-background-grey);
+  box-shadow: 0px 2px 0px 3px var(--theme1-key-shadow-grey);
+}
+.theme1 .calculator__controls .reset,
+.theme1 .calculator__controls .delete,
+.theme1 .calculator__controls .equals {
+  font-size: 0.7rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.theme1 .calculator__controls .reset,
+.theme1 .calculator__controls .delete {
+  background-color: var(--theme1-key-background-blue);
+  box-shadow: 0px 2px 0px 3px var(--theme1-key-shadow-blue);
+}
+.theme1 .calculator__controls .equals {
+  background-color: var(--theme1-key-background-red);
+  box-shadow: 0px 2px 0px 3px var(--theme1-key-shadow-red);
+}
+
+.theme2 {
+  background-color: var(--theme2-main-background);
+}
+
+.theme3 {
+  background-color: var(--theme3-main-background);
 }/*# sourceMappingURL=main.css.map */
