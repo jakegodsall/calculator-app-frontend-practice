@@ -8,14 +8,9 @@ const changeTheme = (e) => {
     });
     e.target.classList.toggle('active');
     const theme = e.target.classList[1];
-
-    console.log(theme);
-
     document.body.className = theme;
 };
 
 radioButtons.forEach((button) => {
     button.addEventListener('click', changeTheme);
 });
-
-console.log(radioButtons);

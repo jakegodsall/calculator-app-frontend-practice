@@ -31,6 +31,10 @@
 
         &__screen {
             background-color: var(--theme2-screen-background);
+
+            .screen-text {
+                color: var(--theme2-font-grey);
+            }
         }
 
         &__controls {

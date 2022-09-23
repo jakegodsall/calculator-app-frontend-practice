@@ -30,6 +30,10 @@
 
         &__screen {
             background-color: var(--theme1-screen-background);
+
+            .screen-text {
+                color: #fff;
+            }
         }
 
         &__controls {

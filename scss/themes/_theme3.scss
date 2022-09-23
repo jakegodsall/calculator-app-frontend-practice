@@ -36,6 +36,10 @@
 
         &__screen {
             background-color: var(--theme3-toggle-background);
+
+            .screen-text {
+                color: var(--theme3-font-yellow);
+            }
         }
 
         &__controls {
@@ -45,6 +49,10 @@
                 background-color: var(--theme3-key-background-magenta);
                 box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
                 color: var(--theme3-font-grey);
+            }
+
+            button:active {
+                filter: brightness(1.5);
             }
 
             .reset,

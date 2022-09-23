@@ -3,4 +3,9 @@
     height: 2.5rem;
     margin-bottom: 0.8rem;
     border-radius: var(--bd-radius);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 1rem;
 }
