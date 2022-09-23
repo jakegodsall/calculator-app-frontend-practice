@@ -37,5 +37,82 @@
 }
 
 :root {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:root {
   font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+}
+
+.attribution {
+  margin-top: 5rem;
+  font-size: 0.7rem;
+}
+
+.calculator {
+  width: 70vw;
+}
+
+.calculator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator__theme-slider input[type=range] {
+  width: 2rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.calculator__theme-numbers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+}
+
+.calculator__screen {
+  width: 100%;
+  height: 2rem;
+}
+
+.calculator__controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.4rem 0.4rem;
+}
+
+.reset {
+  grid-column: 1/3;
+}
+
+.equals {
+  grid-column: 3/5;
 }/*# sourceMappingURL=main.css.map */
