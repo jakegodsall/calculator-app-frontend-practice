@@ -49,47 +49,96 @@ const addNumbers = () => {
     });
 };
 
-const subtractNumbers = () => {
-    const firstValue = screenText.innerText;
-    screenText.innerText = '0';
+const constructOperationsArray = () => {
+    let values = [];
 
-    equalsButton.addEventListener('click', () => {
-        const secondValue = screenText.innerText;
+    operationButtons = {
+        '+': document.getElementById('button-addition'),
+        '-': document.getElementById('button-subtraction'),
+        '*': document.getElementById('button-product'),
+        '/': document.getElementById('button-division'),
+    };
 
-        const result = +firstValue - +secondValue;
+    document.getElementById('button-reset').addEventListener('click', () => {
+        values = [];
+    });
+
+    for (let operation in operationButtons) {
+        operationButtons[operation].addEventListener('click', () => {
+            if (screenText.innerText !== '0') {
+                values.push(screenText.innerText);
+            }
+
+            // allowing for changing operation
+            if (!'+-*/'.includes(values[values.length - 1])) {
+                values.push(operation);
+            } else {
+                values[values.length - 1] = operation;
+            }
+            clearInput();
+        });
+    }
+
+    document.getElementById('button-equals').addEventListener('click', () => {
+        values.push(screenText.innerText);
+        console.log(values);
+
+        const strValues = values.join(' ');
+        console.log(strValues);
+        const result = eval(strValues);
+        console.log(result);
 
         clearInput();
         printNumber(result);
+
+        // reset values
+        values = [];
     });
 };
 
-const multiplyNumbers = () => {
-    const firstValue = screenText.innerText;
-    screenText.innerText = '0';
+constructOperationsArray();
 
-    equalsButton.addEventListener('click', () => {
-        const secondValue = screenText.innerText;
+// const subtractNumbers = () => {
+//     const firstValue = screenText.innerText;
+//     screenText.innerText = '0';
 
-        const result = +firstValue * +secondValue;
+//     equalsButton.addEventListener('click', () => {
+//         const secondValue = screenText.innerText;
 
-        clearInput();
-        printNumber(result);
-    });
-};
+//         const result = +firstValue - +secondValue;
 
-const divideNumbers = () => {
-    const firstValue = screenText.innerText;
-    screenText.innerText = '0';
+//         clearInput();
+//         printNumber(result);
+//     });
+// };
 
-    equalsButton.addEventListener('click', () => {
-        const secondValue = screenText.innerText;
+// const multiplyNumbers = () => {
+//     const firstValue = screenText.innerText;
+//     screenText.innerText = '0';
 
-        const result = +firstValue / +secondValue;
+//     equalsButton.addEventListener('click', () => {
+//         const secondValue = screenText.innerText;
 
-        clearInput();
-        printNumber(result);
-    });
-};
+//         const result = +firstValue * +secondValue;
+
+//         clearInput();
+//         printNumber(result);
+//     });
+// };
+
+// const divideNumbers = () => {
+//     const firstValue = screenText.innerText;
+//     screenText.innerText = '0';
+
+//     equalsButton.addEventListener('click', () => {
+//         const secondValue = screenText.innerText;
+
+//         const result = +firstValue / +secondValue;
+
+//         clearInput();
+//         printNumber(result);
+//     });
+// };
 
 // ----------------- BUTTON LOGIC -----------------
 
@@ -117,25 +166,25 @@ for (let button of buttons) {
         button.addEventListener('click', addDecimal);
     }
 
-    // ----------------- ADDITION -----------------
-    if (button.classList[1] === 'addition') {
-        button.addEventListener('click', addNumbers);
-    }
+    // // ----------------- ADDITION -----------------
+    // if (button.classList[1] === 'addition') {
+    //     button.addEventListener('click', addNumbers);
+    // }
 
-    // ----------------- SUBTRACTION -----------------
-    if (button.classList[1] === 'subtraction') {
-        button.addEventListener('click', subtractNumbers);
-    }
+    // // ----------------- SUBTRACTION -----------------
+    // if (button.classList[1] === 'subtraction') {
+    //     button.addEventListener('click', subtractNumbers);
+    // }
 
-    // ----------------- MULTIPLICATION -----------------
-    if (button.classList[1] === 'product') {
-        button.addEventListener('click', multiplyNumbers);
-    }
+    // // ----------------- MULTIPLICATION -----------------
+    // if (button.classList[1] === 'product') {
+    //     button.addEventListener('click', multiplyNumbers);
+    // }
 
-    // ----------------- DIVISION -----------------
-    if (button.classList[1] === 'division') {
-        button.addEventListener('click', divideNumbers);
-    }
+    // // ----------------- DIVISION -----------------
+    // if (button.classList[1] === 'division') {
+    //     button.addEventListener('click', divideNumbers);
+    // }
 }
 
 // ----------------- KEYBOARD LOGIC  -----------------
@@ -156,23 +205,23 @@ document.addEventListener('keydown', (e) => {
         addDecimal();
     }
 
-    // ----------------- ADDITION -----------------
-    if (e.key === '+') {
-        addNumbers();
-    }
+    // // ----------------- ADDITION -----------------
+    // if (e.key === '+') {
+    //     addNumbers();
+    // }
 
-    // ----------------- SUBTRACTION -----------------
-    if (e.key === '-') {
-        subtractNumbers();
-    }
+    // // ----------------- SUBTRACTION -----------------
+    // if (e.key === '-') {
+    //     subtractNumbers();
+    // }
 
-    // ----------------- MULTIPLICATION -----------------
-    if (e.key === '*') {
-        multiplyNumbers();
-    }
+    // // ----------------- MULTIPLICATION -----------------
+    // if (e.key === '*') {
+    //     multiplyNumbers();
+    // }
 
-    // ----------------- DIVISION -----------------
-    if (e.key === '/') {
-        divideNumbers();
-    }
+    // // ----------------- DIVISION -----------------
+    // if (e.key === '/') {
+    //     divideNumbers();
+    // }
 });
