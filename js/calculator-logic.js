@@ -153,7 +153,6 @@ numericalButtons.forEach((button) => {
 operationButtons.forEach((button) => {
     button.addEventListener('click', () => {
         const operation = button.classList[2];
-
         calc.insertOperation(operation);
     });
 });
@@ -188,5 +187,40 @@ onOffSwitch.addEventListener('click', (e) => {
     } else {
         e.target.innerHTML = 'ON';
         calc.turnOn();
+    }
+});
+
+// ----------------- KEYBOARD EVENT LISTENERS -----------------
+document.addEventListener('keydown', (e) => {
+    // event listener for numerical keys
+    if ('0123456789'.includes(e.key)) {
+        const value = e.key;
+        calc.insertNumber(value);
+    }
+
+    // event listener for operation buttons
+    if ('+-*/'.includes(e.key)) {
+        const operation = e.key;
+        calc.insertOperation(operation);
+    }
+
+    // event listener for del button
+    if (e.key === 'Backspace') {
+        calc.delOneChar();
+    }
+
+    // event listener for decimal point
+    if (e.key === '.') {
+        calc.addDecimalPoint();
+    }
+
+    // event listener for equials button
+    if (e.key === 'Enter') {
+        calc.calculate();
+    }
+
+    // event listener for reset button
+    if (e.key === 'r') {
+        calc.resetValues();
     }
 });

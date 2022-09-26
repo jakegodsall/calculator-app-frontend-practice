@@ -200,6 +200,10 @@ body {
   padding: 1rem;
 }
 
+.screen-text {
+  letter-spacing: 0.1rem;
+}
+
 .calculator__controls {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
