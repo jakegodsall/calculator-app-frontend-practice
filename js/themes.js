@@ -1,4 +1,5 @@
 const radioButtons = document.querySelectorAll('#radio-button');
+const overlay = document.getElementById('overlay');
 
 const changeTheme = (e) => {
     radioButtons.forEach((btn) => {
@@ -7,8 +8,18 @@ const changeTheme = (e) => {
         }
     });
     e.target.classList.toggle('active');
+
     const theme = e.target.classList[1];
-    document.body.className = theme;
+
+    overlay.classList.add('active');
+
+    setTimeout(() => {
+        document.body.className = theme;
+    }, 500);
+
+    setTimeout(() => {
+        overlay.classList.remove('active');
+    }, 1000);
 };
 
 radioButtons.forEach((button) => {
