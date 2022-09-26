@@ -10,7 +10,6 @@ const changeTheme = (e) => {
             btn.classList.remove('active');
         }
     });
-    e.target.classList.toggle('active');
 
     const theme = e.target.classList[1];
 
@@ -22,6 +21,7 @@ const changeTheme = (e) => {
 
     setTimeout(() => {
         overlay.classList.remove('active');
+        e.target.classList.toggle('active');
     }, 1000);
 };
 
