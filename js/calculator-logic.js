@@ -69,6 +69,7 @@ class Calculator {
         console.log('calculation', result);
         this.initialValue = result;
         this.secondValue = 0;
+        this.operation = '';
         this.printToScreen('initial');
 
         console.log(this.initialValue, this.secondValue);
@@ -126,6 +127,12 @@ class Calculator {
 
     turnOff() {
         screenText.innerText = '';
+        screenText.style.visibility = 'hidden';
+    }
+
+    turnOn() {
+        this.resetValues();
+        screenText.style.visibility = 'visible';
     }
 }
 
@@ -177,10 +184,9 @@ onOffSwitch.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('off')) {
         e.target.innerHTML = 'OFF';
-        screenText.style.visibility = 'hidden';
+        calc.turnOff();
     } else {
         e.target.innerHTML = 'ON';
-        screenText.style.visibility = 'visible';
-        calc.resetValues();
+        calc.turnOn();
     }
 });
