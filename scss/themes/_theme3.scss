@@ -74,6 +74,12 @@
                 box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-cyan);
             }
         }
+
+        &__on-off {
+            color: var(--theme3-font-yellow);
+            background-color: var(--theme3-key-background-violet);
+            box-shadow: 0px 2px 0px 3px var(--theme3-key-shadow-magenta);
+        }
     }
 
     .attribution {

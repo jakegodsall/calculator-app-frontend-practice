@@ -9,6 +9,11 @@
     margin: 1rem 0;
 }
 
+.calculator__rhs {
+    display: flex;
+    align-items: center;
+}
+
 .calculator__theme-slider {
     width: 2.2rem;
 }
@@ -49,4 +54,16 @@
             transform: scale(1, 1);
         }
     }
+}
+
+.calculator__on-off {
+    border: none;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+
+.calculator__on-off:active {
+    transform: translateY(2px);
 }

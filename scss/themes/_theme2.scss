@@ -65,6 +65,12 @@
                 box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-orange);
             }
         }
+
+        &__on-off {
+            color: #fff;
+            background-color: var(--theme2-key-background-cyan);
+            box-shadow: 0px 2px 0px 3px var(--theme2-key-shadow-cyan);
+        }
     }
 
     .attribution {
