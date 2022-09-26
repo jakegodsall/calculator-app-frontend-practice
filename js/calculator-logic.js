@@ -117,14 +117,19 @@ class Calculator {
         console.log(this.initialValue, this.secondValue);
     }
 
-    printToScreen(which) {
-        if (which === 'initial') {
-            screenText.innerText = this.initialValue;
-        } else if (which === 'second') {
-            screenText.innerText = this.secondValue;
-        }
+    formatNumber(value) {
+        const obj = new Intl.NumberFormat('en-UK', { maximumFractionDigits: 15 });
+        return obj.format(value);
     }
 
+    printToScreen(which) {
+        if (which === 'initial') {
+            screenText.innerText = this.formatNumber(this.initialValue);
+        } else if (which === 'second') {
+            screenText.innerText = this.formatNumber(this.secondValue);
+        }
+    }
+    3;
     turnOff() {
         screenText.innerText = '';
         screenText.style.visibility = 'hidden';
