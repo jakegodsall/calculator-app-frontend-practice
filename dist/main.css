@@ -50,6 +50,12 @@ body {
   align-items: center;
 }
 
+@media screen and (min-width: 600px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+}
 :root {
   font-family: "League Spartan", sans-serif;
   font-size: 32px;
