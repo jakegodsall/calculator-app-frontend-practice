@@ -147,7 +147,7 @@ body {
   font-size: 0.7rem;
   margin-right: 0.5rem;
   border-radius: 10px;
-  padding: 0.2rem;
+  padding: 0.2rem 0.3rem;
 }
 
 .calculator__on-off:active {

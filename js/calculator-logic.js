@@ -2,6 +2,7 @@
 const screenText = document.getElementById('screen-text');
 const buttons = document.getElementsByClassName('button');
 
+const onOffSwitch = document.getElementById('on-off');
 const decimalButton = document.getElementById('button-decimal');
 const delButton = document.getElementById('button-del');
 const equalsButton = document.getElementById('button-equals');
@@ -122,6 +123,10 @@ class Calculator {
             screenText.innerText = this.secondValue;
         }
     }
+
+    turnOff() {
+        screenText.innerText = '';
+    }
 }
 
 const calc = new Calculator();
@@ -164,4 +169,18 @@ delButton.addEventListener('click', () => {
 // event listener for decimal point button
 decimalButton.addEventListener('click', () => {
     calc.addDecimalPoint();
+});
+
+// event listener for onOff swtich
+onOffSwitch.addEventListener('click', (e) => {
+    e.target.classList.toggle('off');
+
+    if (e.target.classList.contains('off')) {
+        e.target.innerHTML = 'OFF';
+        screenText.style.visibility = 'hidden';
+    } else {
+        e.target.innerHTML = 'ON';
+        screenText.style.visibility = 'visible';
+        calc.resetValues();
+    }
 });
