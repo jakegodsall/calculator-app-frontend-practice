@@ -33,10 +33,17 @@ radioButtons.forEach((button) => {
 
 // set default theme on page load
 window.addEventListener('load', () => {
-    document.body.className = localStorage.getItem('default-theme');
+    const defaultTheme = localStorage.getItem('default-theme');
+
+    document.body.className = defaultTheme;
     radioButtons.forEach((btn) => {
         if (btn.classList.contains('active')) {
             btn.classList.remove('active');
         }
     });
+
+    const activeRadio = document.querySelector(`.radio-button.${defaultTheme}`);
+    activeRadio.classList.toggle('active');
+
+    console.log(activeRadio);
 });
