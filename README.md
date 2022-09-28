@@ -39,6 +39,8 @@ additional changes saved in the browser
 
 &#9745; The addition of an on-off button.
 
+&#9745; On-off behaviour is stored in browser storage.
+
 &#9745; Accepts keyboard input.
 
 ### Screenshot
