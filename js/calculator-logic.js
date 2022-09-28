@@ -129,13 +129,15 @@ class Calculator {
             screenText.innerText = this.formatNumber(this.secondValue);
         }
     }
-    3;
+
     turnOff() {
+        onOffSwitch.innerText = 'OFF';
         screenText.innerText = '';
         screenText.style.visibility = 'hidden';
     }
 
     turnOn() {
+        onOffSwitch.innerText = 'ON';
         this.resetValues();
         screenText.style.visibility = 'visible';
     }
@@ -186,12 +188,15 @@ decimalButton.addEventListener('click', () => {
 onOffSwitch.addEventListener('click', (e) => {
     e.target.classList.toggle('off');
 
+    localStorage.setItem('turned-on', 'false');
+
     if (e.target.classList.contains('off')) {
-        e.target.innerHTML = 'OFF';
+        // e.target.innerHTML = 'OFF';
         calc.turnOff();
     } else {
-        e.target.innerHTML = 'ON';
+        // e.target.innerHTML = 'ON';
         calc.turnOn();
+        localStorage.setItem('turned-on', 'true');
     }
 });
 
@@ -227,5 +232,14 @@ document.addEventListener('keydown', (e) => {
     // event listener for reset button
     if (e.key === 'r') {
         calc.resetValues();
+    }
+});
+
+window.addEventListener('load', () => {
+    if (localStorage.getItem('turned-on') === 'false') {
+        onOffSwitch.classList.toggle('off');
+        calc.turnOff();
+    } else {
+        calc.turnOn();
     }
 });
