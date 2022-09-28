@@ -49,7 +49,7 @@ additional changes saved in the browser
 
 ### Links
 
--   Live Site URL: [Netlify](https://jakegodsall-calculator.netlify.app/m)
+-   Live Site URL: [Netlify](https://jakegodsall-calculator.netlify.app/)
 
 ## My process
 
