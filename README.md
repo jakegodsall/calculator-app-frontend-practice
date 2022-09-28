@@ -30,7 +30,7 @@ Users should be able to:
 
 &#9745; Adjust the color theme based on their preference
 
-&#9744; Have their initial theme preference checked using `prefers-color-scheme` and have any
+&#9745; Have their initial theme preference checked using `prefers-color-scheme` and have any
 additional changes saved in the browser
 
 ### Extra features added
