@@ -11,6 +11,8 @@ const changeTheme = (e) => {
         }
     });
 
+    localStorage.setItem('default-theme', e.target.classList[1]);
+
     const theme = e.target.classList[1];
 
     overlay.classList.add('active');
@@ -27,4 +29,14 @@ const changeTheme = (e) => {
 
 radioButtons.forEach((button) => {
     button.addEventListener('click', changeTheme);
+});
+
+// set default theme on page load
+window.addEventListener('load', () => {
+    document.body.className = localStorage.getItem('default-theme');
+    radioButtons.forEach((btn) => {
+        if (btn.classList.contains('active')) {
+            btn.classList.remove('active');
+        }
+    });
 });
