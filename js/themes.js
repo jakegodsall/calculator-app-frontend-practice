@@ -33,7 +33,16 @@ radioButtons.forEach((button) => {
 
 // set default theme on page load
 window.addEventListener('load', () => {
+    // set default theme to theme1 if user has not visited site before
+    if (localStorage.getItem('default-theme') === null) {
+        localStorage.setItem('default-theme', 'theme1');
+    }
+
     const defaultTheme = localStorage.getItem('default-theme');
+
+    if (defaultTheme === null) {
+        defaultTheme === 'theme1';
+    }
 
     document.body.className = defaultTheme;
     radioButtons.forEach((btn) => {
