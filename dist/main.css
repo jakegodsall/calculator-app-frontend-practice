@@ -146,16 +146,16 @@ body {
   height: 0.5rem;
   background-color: inherit;
   border-radius: 50%;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
   -webkit-animation-name: pop-reverse;
           animation-name: pop-reverse;
   -webkit-animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
           animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
 }
 .calculator__theme-radio .active {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-name: animate-pop;
           animation-name: animate-pop;
   -webkit-animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
